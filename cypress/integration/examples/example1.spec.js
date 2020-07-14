@@ -5,7 +5,7 @@ describe('My first Test', () => {
   }),
   
   it('My first Test case', () => {
-    cy.visit("https://github.com/frizio/");
+    cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
   })
 
 })

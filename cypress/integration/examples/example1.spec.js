@@ -24,7 +24,11 @@ describe('My first Test', () => {
       if (textVeg.includes('Carrot')) {
         $el.find('button').click();
       }
-    })
+    });
+
+    cy.get('.brand').then(
+      (logo) => {cy.log(logo.text());}
+    );
 
   })
 

@@ -30,6 +30,8 @@ describe('My first Test', () => {
       (logo) => {cy.log(logo.text());}
     );
 
+    //cy.log('Ciaoooo');
+
   })
 
 })

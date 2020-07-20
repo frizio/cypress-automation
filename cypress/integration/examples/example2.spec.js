@@ -11,6 +11,9 @@ describe('My Second Test Suite', () => {
     cy.get('#checkBoxOption1').uncheck().should('not.be.checked');
     cy.get('input[type="checkbox"]').check(['option2', 'option3']);
 
+    // Static Dropdown
+    cy.get('select').select('option2').should('have.value', 'option3');
+
   });
 
 })

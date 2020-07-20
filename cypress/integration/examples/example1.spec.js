@@ -33,6 +33,8 @@ describe('My first Test', () => {
 
     //cy.log('Ciaoooo');
 
+    cy.get('.brand').should('have.text', 'CREENKART');
+
   })
 
 })

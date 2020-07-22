@@ -37,9 +37,7 @@ describe('My Third Test Suite', () => {
         cy.get('tr > td:nth-child(2)').eq(index).next().then( (price) => {
           const priceText = price.text();
           expect(priceText).to.equal('25');
-        }
-
-        );
+        });
       }
     });
 

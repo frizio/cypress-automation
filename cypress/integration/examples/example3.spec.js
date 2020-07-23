@@ -18,14 +18,6 @@ describe('My Third Test Suite', () => {
       expect(msg).to.equal('Hello , Are you sure you want to confirm?');
     })
 
-    /*
-    cy.get('#opentab').invoke('removeAttr', 'target').click();
-    //cy.get('#opentab').click();
-
-    cy.url().should('include','qaclickacademy');
-    cy.go('back');
-    */
-
     // Web table
     // cy.get('#product')
     // 2 column of the table

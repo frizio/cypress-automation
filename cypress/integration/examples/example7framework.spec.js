@@ -24,9 +24,9 @@ describe('The Test Suite', () => {
 
     cy.get(':nth-child(2) > .nav-link').click()
 
-    cy.selectProduct('Blackberry')
-    cy.selectProduct('Nokia Edge')
-
+    this.data.productName.forEach( function(element) {
+      cy.selectProduct(element)
+    });
 
   });
 

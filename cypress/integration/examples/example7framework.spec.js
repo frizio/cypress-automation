@@ -22,6 +22,12 @@ describe('The Test Suite', () => {
     // Validation 3 : Disabled field
     cy.get('#inlineRadio3').should('be.disabled')
 
+    cy.get(':nth-child(2) > .nav-link').click()
+
+    cy.selectProduct('Blackberry')
+    cy.selectProduct('Nokia Edge')
+
+
   });
 
 })

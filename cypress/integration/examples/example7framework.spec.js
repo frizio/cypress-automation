@@ -15,19 +15,19 @@ describe('The Test Suite', () => {
     const homePage = new HomePage();
 
     cy.visit("https://rahulshettyacademy.com/angularpractice/")
-    
-    cy.get("input[name='name']:nth-child(2)").type(this.data.name)
-    cy.get('select').select(this.data.gender)
+
+    homePage.getEditBox().type(this.data.name)
+    homePage.getGender().select(this.data.gender)
     
     // Validation 1 : Two way data binding
-    cy.get(':nth-child(4) > .ng-untouched').should('have.value', this.data.name)
+    homePage.getTwoWayDataBinding().should('have.value', this.data.name)
     // Validation 2 : Min length of a text field
-    cy.get("input[name='name']:nth-child(2)").should('have.attr', 'minlength', '2')
+    homePage.getEditBox().should('have.attr', 'minlength', '2')
     // Validation 3 : Disabled field
-    cy.get('#inlineRadio3').should('be.disabled')
+    homePage.getEntrepeneur().should('be.disabled')
 
     //cy.pause()
-    cy.get(':nth-child(2) > .nav-link').click()
+    homePage.getShopTab().click()
 
     this.data.productName.forEach( function(element) {
       cy.selectProduct(element)

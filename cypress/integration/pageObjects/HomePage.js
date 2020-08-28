@@ -13,7 +13,7 @@ class HomePage {
   }
 
   getEntrepeneur() {
-    cy.get('#inlineRadio3')
+    return cy.get('#inlineRadio3')
   }
 
   getShopTab() {

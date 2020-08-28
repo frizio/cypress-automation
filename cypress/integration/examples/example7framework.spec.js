@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import HomePage from "../pageObjects/HomePage"
 
 describe('The Test Suite', () => {
 
@@ -11,7 +12,10 @@ describe('The Test Suite', () => {
   
   it('The 1st Test Case', function() {
 
+    const homePage = new HomePage();
+
     cy.visit("https://rahulshettyacademy.com/angularpractice/")
+    
     cy.get("input[name='name']:nth-child(2)").type(this.data.name)
     cy.get('select').select(this.data.gender)
     

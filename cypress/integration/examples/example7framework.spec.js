@@ -71,3 +71,6 @@ describe('The Test Suite', () => {
   });
 
 })
+
+// From command line:
+// .\node_modules\.bin\cypress run --spec cypress/integration/examples/example7framework.spec.js --env url="https://google.com" --headed" 

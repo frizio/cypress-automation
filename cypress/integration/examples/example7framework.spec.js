@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import HomePage from "../pageObjects/HomePage"
+import ShopPage from "../pageObjects/ShopPage"
 
 describe('The Test Suite', () => {
 
@@ -13,6 +14,7 @@ describe('The Test Suite', () => {
   it('The 1st Test Case', function() {
 
     const homePage = new HomePage();
+    const shopPage = new ShopPage();
 
     cy.visit("https://rahulshettyacademy.com/angularpractice/")
 
@@ -32,6 +34,8 @@ describe('The Test Suite', () => {
     this.data.productName.forEach( function(element) {
       cy.selectProduct(element)
     });
+
+    shopPage.getCheckout().click()
 
   });
 

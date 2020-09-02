@@ -30,7 +30,6 @@ describe('The Test Suite', () => {
     // Validation 3 : Disabled field
     homePage.getEntrepeneur().should('be.disabled')
 
-    //cy.pause()
     homePage.getShopTab().click()
 
     this.data.productName.forEach( function(element) {
@@ -38,6 +37,23 @@ describe('The Test Suite', () => {
     });
 
     shopPage.getCheckout().click()
+
+    cy.pause()
+    // Sum the product chart price
+    var totalPrice = 0;
+    cy.get('tr td:nth-child(4) strong').each( ($el, index, $list) => {
+      //cy.log($el.text())
+      const price = $el.text().split(" ")[1].trim()
+      //cy.log(price)
+      totalPrice = totalPrice + Number(price)
+    }).then( function() {
+      cy.log(totalPrice)
+    } )
+    //Compare sum and total
+    cy.get('h3 strong').then( function(element) {
+      const total = element.text().split(" ")[1].trim()
+      expect(Number(total)).to.equal(totalPrice)
+    })
 
     cy.contains('Checkout').click()
 

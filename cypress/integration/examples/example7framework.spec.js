@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import HomePage from "../pageObjects/HomePage"
-import ShopPage from "../pageObjects/ShopPage"
+import HomePage from "../../support/pageObjects/HomePage"
+import ShopPage from "../../support/pageObjects/ShopPage"
 
 describe('The Test Suite', () => {
 

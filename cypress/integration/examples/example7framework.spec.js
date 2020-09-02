@@ -13,6 +13,8 @@ describe('The Test Suite', () => {
   
   it('The 1st Test Case', function() {
 
+    Cypress.config('defaultCommandTimeout', 10000)
+
     const homePage = new HomePage();
     const shopPage = new ShopPage();
 
@@ -36,6 +38,11 @@ describe('The Test Suite', () => {
     });
 
     shopPage.getCheckout().click()
+
+    cy.contains('Checkout').click()
+
+    cy.get('#country').type('Italy')
+    cy.get('.suggestions > ul > li > a').click()
 
   });
 

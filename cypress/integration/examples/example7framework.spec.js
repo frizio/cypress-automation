@@ -18,7 +18,7 @@ describe('The Test Suite', () => {
     const homePage = new HomePage();
     const shopPage = new ShopPage();
 
-    cy.visit("https://rahulshettyacademy.com/angularpractice/")
+    cy.visit(Cypress.env('url'))
 
     homePage.getEditBox().type(this.data.name)
     homePage.getGender().select(this.data.gender)

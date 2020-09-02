@@ -2,6 +2,6 @@
   "defaultCommandTimeout": 8000,
   "pageLoadTimeout":50000,
   "env" : {
-    "url": "https://rahulshettyacademy.com/angularpractice/"
+    "url": "https://rahulshettyacademy.com"
   }
 }

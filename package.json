@@ -11,6 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^4.10.0",
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1"
   }
 }

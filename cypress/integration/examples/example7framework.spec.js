@@ -59,8 +59,8 @@ describe('The Test Suite', () => {
 
     cy.get('#country').type('Italy')
     cy.get('.suggestions > ul > li > a').click()
-    cy.get('.checkbox').click()
-    //cy.get('#checkbox2').click({force: true})
+    //cy.get('.checkbox').click()
+    cy.get('#checkbox2').click({force: true})
     cy.get('input[type="submit"]').click()
     
     cy.get('.alert').then( function(element) {

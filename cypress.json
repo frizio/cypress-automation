@@ -4,5 +4,6 @@
   "env": {
     "url": "https://rahulshettyacademy.com"
   },
-  "projectId": "k4or4a"
+  "projectId": "k4or4a",
+  "reporter": "mochawesome"
 }

@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-03T15:40:05.820Z",
+    "end": "2020-09-03T15:40:38.164Z",
+    "duration": 32344,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "59e95e5a-b9c8-4fe0-9202-9d2c87deef38",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\example7framework.spec.js",
+      "file": "cypress\\integration\\examples\\example7framework.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7a687c21-d0dd-47df-a957-453361fc14a3",
+          "title": "The Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "The 1st Test Case",
+              "fullTitle": "The Test Suite The 1st Test Case",
+              "timedOut": null,
+              "duration": 28825,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.config('defaultCommandTimeout', 10000);\nvar homePage = new _HomePage[\"default\"]();\nvar shopPage = new _ShopPage[\"default\"]();\ncy.visit(Cypress.env('url') + \"/angularpractice/\");\nhomePage.getEditBox().type(this.data.name);\nhomePage.getGender().select(this.data.gender); // Validation 1 : Two way data binding\nhomePage.getTwoWayDataBinding().should('have.value', this.data.name); // Validation 2 : Min length of a text field\nhomePage.getEditBox().should('have.attr', 'minlength', '2'); // Validation 3 : Disabled field\nhomePage.getEntrepeneur().should('be.disabled');\nhomePage.getShopTab().click();\nthis.data.productName.forEach(function (element) {\n  cy.selectProduct(element);\n});\nshopPage.getCheckout().click(); //cy.pause()\n// Sum the product chart price\nvar totalPrice = 0;\ncy.get('tr td:nth-child(4) strong').each(function ($el, index, $list) {\n  //cy.log($el.text())\n  var price = $el.text().split(\" \")[1].trim(); //cy.log(price)\n  totalPrice = totalPrice + Number(price);\n}).then(function () {\n  cy.log(totalPrice);\n}); //Compare sum and total\ncy.get('h3 strong').then(function (element) {\n  var total = element.text().split(\" \")[1].trim();\n  expect(Number(total)).to.equal(totalPrice);\n});\ncy.contains('Checkout').click();\ncy.get('#country').type('Italy');\ncy.get('.suggestions > ul > li > a').click(); //cy.get('.checkbox').click()\ncy.get('#checkbox2').click({\n  force: true\n});\ncy.get('input[type=\"submit\"]').click();\ncy.get('.alert').then(function (element) {\n  var actualText = element.text();\n  expect(actualText.includes(\"Success\")).to.be[\"true\"];\n});",
+              "err": {},
+              "uuid": "9dd23fc6-0b58-4345-af80-56b27692eb57",
+              "parentUUID": "7a687c21-d0dd-47df-a957-453361fc14a3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9dd23fc6-0b58-4345-af80-56b27692eb57"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28825,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

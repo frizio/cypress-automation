@@ -38,7 +38,7 @@ describe('The Test Suite', () => {
 
     shopPage.getCheckout().click()
 
-    cy.pause()
+    //cy.pause()
     // Sum the product chart price
     var totalPrice = 0;
     cy.get('tr td:nth-child(4) strong').each( ($el, index, $list) => {

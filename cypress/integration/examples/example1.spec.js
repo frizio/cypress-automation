@@ -33,7 +33,7 @@ describe('My first Test', () => {
 
     //cy.log('Ciaoooo');
 
-    cy.get('.brand').should('have.text', 'CREENKART');
+    cy.get('.brand').should('have.text', 'GREENKART');
 
   })
 

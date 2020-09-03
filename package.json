@@ -9,7 +9,8 @@
     "example1Test": "npm run test -- --spec '.\\cypress\\integration\\examples\\example1.spec.js' ",
     "headTest": "npm run test -- --headed",
     "chromeTest": "npm run test -- --browser chrome",
-    "recordDashboardTest": "npm run test -- --key 039760c4-9ec2-470a-bc00-397d7788c53d --reporter 'mochawesome'"
+    "recordDashboardTest": "npm run test -- --key 039760c4-9ec2-470a-bc00-397d7788c53d --reporter 'mochawesome'",
+    "greenkartTest": "npm run test -- --spec '.\\cypress\\integration\\examples\\greenkart\\*' "
   },
   "keywords": [],
   "author": "",

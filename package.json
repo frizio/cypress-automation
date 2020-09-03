@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "openDashboard": "node_modules\\.bin\\cypress open",
+    "test": "node_modules\\.bin\\cypress run",
+    "example1Test": "npm run test -- --spec '.\\cypress\\integration\\examples\\example1.spec.js' ",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test -- --key 039760c4-9ec2-470a-bc00-397d7788c53d --reporter 'mochawesome'"
   },
   "keywords": [],
   "author": "",

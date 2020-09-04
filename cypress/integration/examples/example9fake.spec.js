@@ -1,6 +1,4 @@
 /// <reference types="cypress" />
-import HomePage from "../../support/pageObjects/HomePage"
-import ShopPage from "../../support/pageObjects/ShopPage"
 
 describe('Another xhr Test Suite', () => {
   
